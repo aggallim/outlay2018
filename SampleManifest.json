@@ -1,0 +1,15 @@
+{
+    "fileLocations": [
+        {
+            "URIs": [
+
+"https://s3-eu-west-1.amazonaws.com/<BUCKET_NAME>/<FILE_NAME>",
+            ]
+        }
+    ],
+    "globalUploadSettings": {
+         "format": "CSV",
+        "delimiter": "|",
+        "containsHeader": "true"
+    }
+}

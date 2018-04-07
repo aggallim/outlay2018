@@ -1,0 +1,25 @@
+from io import StringIO
+import boto3
+
+csv_buffer = StringIO()
+sampledata.to_csv(csv_buffer,sep='|')
+s3_resource = boto3.resource('s3')
+
+s3_resource.Object(bucket, 'sampledata1.csv').put(Body=csv_buffer.getvalue())
+
+
+{
+    "fileLocations": [
+        {
+            "URIs": [
+
+"https://s3-eu-west-1.amazonaws.com/<BUCKET_NAME>/<FILE_NAME>",
+            ]
+        }
+    ],
+    "globalUploadSettings": {
+         "format": "CSV",
+        "delimiter": "|",
+        "containsHeader": "true"
+    }
+}
